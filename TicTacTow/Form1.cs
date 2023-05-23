@@ -12,6 +12,12 @@ namespace TicTacTow
 {
     public partial class Form1 : Form
     {
+
+        public enum Player
+        {
+            X, O
+        }
+
         public Form1()
         {
             InitializeComponent();
