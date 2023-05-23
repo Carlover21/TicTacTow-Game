@@ -35,21 +35,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 23);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 25);
+            this.label1.Size = new System.Drawing.Size(135, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Player Win";
+            this.label1.Text = "Player Wins:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(254, 23);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(512, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(94, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.label2.Text = "Ai Wins:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
