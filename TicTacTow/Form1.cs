@@ -22,12 +22,25 @@ namespace TicTacTow
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Aimove(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Playerbutton(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Restartbutton(object sender, EventArgs e)
+        {
+
+        }
+        private void CheckGame()
+        {
+
+        }
+        private void RestartGame()
         {
 
         }

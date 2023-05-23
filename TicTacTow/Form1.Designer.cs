@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.AITimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +66,6 @@
             this.label2.Size = new System.Drawing.Size(94, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ai Wins:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
@@ -75,6 +76,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Click";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Playerbutton);
             // 
             // button8
             // 
@@ -85,6 +87,7 @@
             this.button8.TabIndex = 11;
             this.button8.Text = "Click";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.Playerbutton);
             // 
             // button7
             // 
@@ -95,6 +98,7 @@
             this.button7.TabIndex = 12;
             this.button7.Text = "Click";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.Playerbutton);
             // 
             // button2
             // 
@@ -105,6 +109,7 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "Click";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Playerbutton);
             // 
             // button3
             // 
@@ -115,6 +120,7 @@
             this.button3.TabIndex = 14;
             this.button3.Text = "Click";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Playerbutton);
             // 
             // button4
             // 
@@ -125,6 +131,7 @@
             this.button4.TabIndex = 15;
             this.button4.Text = "Click";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Playerbutton);
             // 
             // button5
             // 
@@ -135,7 +142,7 @@
             this.button5.TabIndex = 16;
             this.button5.Text = "Click";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.Playerbutton);
             // 
             // button6
             // 
@@ -146,6 +153,7 @@
             this.button6.TabIndex = 17;
             this.button6.Text = "Click";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.Playerbutton);
             // 
             // button9
             // 
@@ -156,6 +164,7 @@
             this.button9.TabIndex = 18;
             this.button9.Text = "Click";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.Playerbutton);
             // 
             // button10
             // 
@@ -166,6 +175,12 @@
             this.button10.TabIndex = 19;
             this.button10.Text = "Restart";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.Restartbutton);
+            // 
+            // AITimer
+            // 
+            this.AITimer.Interval = 1000;
+            this.AITimer.Tick += new System.EventHandler(this.Aimove);
             // 
             // Form1
             // 
@@ -206,6 +221,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Timer AITimer;
     }
 }
 
