@@ -25,6 +25,7 @@ namespace TicTacTow
         public Form1()
         {
             InitializeComponent();
+            RestartGame();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -52,7 +53,13 @@ namespace TicTacTow
         }
         private void RestartGame()
         {
-
+            List<Button> buttons = new List<Button> ( button1, button2, button3, button4, button5, button6, button7, button8, button9 );
+            foreach (Button s in buttons)
+            {
+                s.Enabled = true;
+                s.Text = "Click";
+                s.BackColor = DefaultBackColor;
+            }
         }
     }
 }
