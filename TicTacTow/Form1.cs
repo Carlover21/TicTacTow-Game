@@ -17,6 +17,10 @@ namespace TicTacTow
         {
             X, O
         }
+        Player currentPlayer;
+        Random random = new Random();
+        int PlayerWinsCount = 0;
+        int AiWinsCount = 0;
 
         public Form1()
         {
