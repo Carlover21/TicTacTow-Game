@@ -67,8 +67,30 @@ namespace TicTacTow
         }
         private void CheckGame()
         {
+            if (button1.Text == "X" && button2.Text == "X" && button3.Text == "X"
+              || button4.Text == "X" && button5.Text == "X" && button6.Text == "X"
+              || button7.Text == "X" && button9.Text == "X" && button8.Text == "X"
+              || button1.Text == "X" && button4.Text == "X" && button7.Text == "X"
+              || button2.Text == "X" && button5.Text == "X" && button8.Text == "X"
+              || button3.Text == "X" && button6.Text == "X" && button9.Text == "X"
+              || button1.Text == "X" && button5.Text == "X" && button9.Text == "X"
+              || button3.Text == "X" && button5.Text == "X" && button7.Text == "X")
+            {
 
-        }
+            }
+
+
+            else if (button1.Text == "O" && button2.Text == "O" && button3.Text == "O"
+            || button4.Text == "O" && button5.Text == "O" && button6.Text == "O"
+            || button7.Text == "O" && button9.Text == "O" && button8.Text == "O"
+            || button1.Text == "O" && button4.Text == "O" && button7.Text == "O"
+            || button2.Text == "O" && button5.Text == "O" && button8.Text == "O"
+            || button3.Text == "O" && button6.Text == "O" && button9.Text == "O"
+            || button1.Text == "O" && button5.Text == "O" && button9.Text == "O"
+            || button3.Text == "O" && button5.Text == "O" && button7.Text == "O")
+            {
+
+            }
         private void RestartGame()
         {
             buttons = new List<Button> { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
