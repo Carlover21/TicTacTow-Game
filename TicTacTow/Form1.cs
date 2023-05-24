@@ -40,7 +40,11 @@ namespace TicTacTow
 
         private void Playerbutton(object sender, EventArgs e)
         {
-
+            var button = (Button)sender;
+            currentPlayer = Player.X;
+            button.Text = currentPlayer.ToString();
+            button.Enabled = false;
+            button.BackColor = Color.Purple;
         }
 
         private void Restartbutton(object sender, EventArgs e)
@@ -53,13 +57,14 @@ namespace TicTacTow
         }
         private void RestartGame()
         {
-            List<Button> buttons = new List<Button> ( button1, button2, button3, button4, button5, button6, button7, button8, button9 );
-            foreach (Button s in buttons)
+            List<Button> buttons = new List<Button> { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
+            foreach (Button button in buttons)
             {
-                s.Enabled = true;
-                s.Text = "Click";
-                s.BackColor = DefaultBackColor;
+                button.Enabled = true;
+                button.Text = "Click";
+                button.BackColor = DefaultBackColor;
             }
         }
+
     }
 }
