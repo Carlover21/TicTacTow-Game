@@ -21,6 +21,7 @@ namespace TicTacTow
         Random random = new Random();
         int PlayerWinsCount = 0;
         int AiWinsCount = 0;
+        List<Button> buttons;
 
         public Form1()
         {
@@ -45,11 +46,14 @@ namespace TicTacTow
             button.Text = currentPlayer.ToString();
             button.Enabled = false;
             button.BackColor = Color.Purple;
+            buttons.Remove(button);
+            CheckGame();
+            AITimer.Start();
         }
 
         private void Restartbutton(object sender, EventArgs e)
         {
-
+            RestartGame();
         }
         private void CheckGame()
         {
@@ -57,7 +61,7 @@ namespace TicTacTow
         }
         private void RestartGame()
         {
-            List<Button> buttons = new List<Button> { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
+            buttons = new List<Button> { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
             foreach (Button button in buttons)
             {
                 button.Enabled = true;
