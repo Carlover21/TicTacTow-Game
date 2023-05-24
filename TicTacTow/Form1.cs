@@ -36,7 +36,17 @@ namespace TicTacTow
 
         private void Aimove(object sender, EventArgs e)
         {
-
+            if (buttons.Count > 0)
+            {
+                int index = random.Next(buttons.Count);
+                buttons[index].Enabled = false;
+                currentPlayer = Player.O;
+                buttons[index].Text = currentPlayer.ToString();
+                buttons[index].BackColor = Color.Blue;
+                buttons.RemoveAt(index);
+                CheckGame();
+                AITimer.Stop();
+            }
         }
 
         private void Playerbutton(object sender, EventArgs e)
