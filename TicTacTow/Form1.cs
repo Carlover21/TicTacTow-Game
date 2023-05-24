@@ -76,7 +76,11 @@ namespace TicTacTow
               || button1.Text == "X" && button5.Text == "X" && button9.Text == "X"
               || button3.Text == "X" && button5.Text == "X" && button7.Text == "X")
             {
-
+                AITimer.Stop();
+                MessageBox.Show("Player Wins ");
+                PlayerWinsCount++;
+                label1.Text = "Player wins:  " + PlayerWinsCount;
+                RestartGame();
             }
 
 
@@ -89,8 +93,15 @@ namespace TicTacTow
             || button1.Text == "O" && button5.Text == "O" && button9.Text == "O"
             || button3.Text == "O" && button5.Text == "O" && button7.Text == "O")
             {
-
+                AITimer.Stop();
+                MessageBox.Show("AI Wins ");
+                AiWinsCount++;
+                label2.Text = "AI wins:  " + AiWinsCount;
+                RestartGame();
             }
+
+        }
+
         private void RestartGame()
         {
             buttons = new List<Button> { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
@@ -101,6 +112,5 @@ namespace TicTacTow
                 button.BackColor = DefaultBackColor;
             }
         }
-
     }
 }
